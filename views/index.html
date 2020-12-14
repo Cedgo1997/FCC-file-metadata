@@ -12,15 +12,25 @@
 		/>
 	</head>
 	<body>
-		<div>
-			<h4 id="output"></h4>
+		<div class="container mt-5">
 			<form
 				enctype="multipart/form-data"
+				class="form-inline"
+				action="api/fileanalyse"
 				method="POST"
-				action="/api/fileanalyse"
 			>
-				<input id="inputfield" type="file" name="upfile" />
-				<input id="button" type="submit" value="Upload" />
+				<div class="form-group mx-sm-3 mb-2">
+					<label for="inputfield" class="sr-only">Upload File</label>
+					<input
+						type="file"
+						class="form-control"
+						id="inputfield"
+						name="upfile"
+					/>
+				</div>
+				<button type="submit" class="btn btn-primary mb-2">
+					Submit
+				</button>
 			</form>
 		</div>
 		<script
